@@ -1,0 +1,116 @@
+/***** BASE STYLES *****/
+.body-theme {
+    background: #d9d5d4;
+    color: #0f1015;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/***** HEADER *****/
+header {
+    height: 80px;
+}
+/* To line up header and nav along the bottom, subtract font-size and 25 from 80 for top padding. */
+header h1 {
+    color: #0f1015;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    padding: 25px 0 25px 6px;
+}
+nav {
+    float: right;
+    padding: 35px 6px 25px 0;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a {
+    color: #0f1015;
+    font-size: 20px;
+    padding-left: 40px;
+    text-decoration: none;
+}
+
+/***** GRID *****/
+.full-width {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+.half-width {
+    width: 600px;
+    float: left;
+}
+.third-width {
+    width: 400px;
+    float: left;
+}
+
+/***** ABOUT *****/
+#about .full-width {
+    padding: 40px 0;
+}
+#about h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    padding-left: 50px
+}
+#about p {
+    color: #0f1015;
+    font-size: 21px;
+    padding: 0 10px 0 0;
+}
+#about span {
+    font-style: italic;
+}
+
+#about img#argentina-cris {
+    width: 500px;
+    height: auto;
+    border: 12px solid #ffffff;
+    padding-top: 21px
+}
+
+/***** WORK *****/
+#work .full-width {
+    font-family: 'Montserrat' sans-serif;
+}
+#work h2 {
+    font-size: 24px;
+    padding-left: 6px;
+}
+#work ul li a {
+    font-size: 20px;
+    list-style: none; /* Not working right now. */
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+/***** CREATIVE *****/
+#creative .full-width {
+    font-family: 'Montserrat' sans-serif;
+}
+#creative h2 {
+    font-size: 24px;
+    padding-left: 6px;
+}
+#creative ul li a {
+    font-size: 20px;
+    list-style: none; /* Not working right now. */
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+/***** CONTACT *****/
+#contact .full-width {
+    font-family: 'Montserrat' sans-serif;
+}
+#contact h2 {
+    font-size: 24px;
+    padding-left: 6px;
+}
+#contact ul li a {
+    font-size: 20px;
+    list-style: none; /* Not working right now. */
+    padding: 10px 0;
+    text-decoration: none;
+}
