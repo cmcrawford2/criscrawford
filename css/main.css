@@ -6,28 +6,177 @@
 }
 
 /***** HEADER *****/
-header {
-    height: 80px;
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-/* To line up header and nav along the bottom, subtract font-size and 25 from 80 for top padding. */
+
+.header-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+
 header h1 {
     color: #0f1015;
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    padding: 25px 0 25px 6px;
+    font-size: 36px;
 }
+
 nav {
-    float: right;
-    padding: 35px 6px 25px 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
 }
-nav ul li{
-    display: inline-block;
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style-type: none;
 }
-nav ul li a {
+
+nav li a {
     color: #0f1015;
     font-size: 20px;
-    padding-left: 40px;
+    padding: 0;
     text-decoration: none;
+    list-style-type: none;
+}
+
+.header-divider {
+  width: 100%;
+  height: 2px;
+  margin: 0;
+  background: #0f1015;
+}
+
+/***** ABOUT *****/
+
+#about-wrapper { /* This wrapper encloses the picture, about, and my favorite quote. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+#about-wrapper h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+#about-wrapper p {
+    color: #0f1015;
+    font-size: 21px;
+    padding: 0 10px 0 0;
+}
+
+#about-wrapper img#argentina-cris {
+    width: 500px;
+    height: auto;
+    border: 12px solid white;
+    margin-top: 20px;
+}
+
+#picture-about {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 95%;
+}
+
+#about-box {
+    margin: 0 20px;
+}
+
+.picture-caption {
+    width: 95%;
+    background-color: skyblue;
+}
+
+.picture-caption p {
+    margin: 0 0 15px 0;
+    font-size: 10px;
+    font-style: italic;
+    text-align: left;
+    background-color: chartreuse;
+}
+
+.quote-container {
+    width: 95%;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.quote-container h2 {
+    text-align: left;
+}
+
+.quote-container h4 {
+    margin: 0;
+    font-size: 18px;
+    font-style: unset;
+    font-weight: normal;
+}
+
+.quote-container span {
+    font-style: italic;
+}
+
+.content-body { /* This centers the content block */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-block {    /* This has a header and the block that has the columns in it. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+}
+
+.content-block h2 {
+    text-align: left;
+}
+
+.content-block-columns {    /* This is the block for the columns - they are row-wise. */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.pic-plus-info {    /* This is a single column. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(33% - 30px);
+    margin: 0 15px;
+}
+
+.pic-plus-info-img {
+    height: auto;
+    border: 10px solid white;
+    margin: 0 21px 21px 21px;
+    width: calc(100% - 20px);
+}
+
+.pic-plus-info-img-static {
+    height: auto;
+    border: 10px solid tan;
+    margin: 0 21px 21px 21px;
+    width: calc(100% - 20px);
 }
 
 /***** GRID *****/
@@ -52,7 +201,11 @@ nav ul li a {
 #about h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
-    padding-left: 50px
+    padding-left: 50px;
+}
+#about h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
 }
 #about p {
     color: #0f1015;
@@ -67,23 +220,11 @@ nav ul li a {
     width: 500px;
     height: auto;
     border: 12px solid #ffffff;
-    padding-top: 21px
+    margin-top: 21px
 }
 
 /***** WORK *****/
-#work .full-width {
-    font-family: 'Montserrat' sans-serif;
-}
-#work h2 {
-    font-size: 24px;
-    padding-left: 6px;
-}
-#work ul li a {
-    font-size: 20px;
-    list-style: none; /* Not working right now. */
-    padding: 10px 0;
-    text-decoration: none;
-}
+
 
 /***** CREATIVE *****/
 #creative .full-width {
@@ -95,7 +236,7 @@ nav ul li a {
 }
 #creative ul li a {
     font-size: 20px;
-    list-style: none; /* Not working right now. */
+    list-style-type: none; /* Not working right now. */
     padding: 10px 0;
     text-decoration: none;
 }
@@ -110,7 +251,7 @@ nav ul li a {
 }
 #contact ul li a {
     font-size: 20px;
-    list-style: none; /* Not working right now. */
+    list-style-type: none; /* Not working right now. */
     padding: 10px 0;
     text-decoration: none;
 }

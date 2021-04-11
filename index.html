@@ -13,46 +13,121 @@
     </head>
     <body class = body-theme>
         <header>
-            <div class="full-width">
-                <div class="half-width">
-                    <h1>Cris Crawford</h1>
-                </div>
-                <div class="half-width">
-                    <nav>
-                        <ul>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#work">Projects</a></li>
-                            <li><a href="#creative">Creative</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="header-wrapper">
+              <div class="header-block">
+                <h1>Cris Crawford</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#react-block">React Apps</a></li>
+                        <li><a href="#work">Projects</a></li>
+                        <li><a href="#creative">Creative</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+              </div>
             </div>
+            <div class="header-divider"></div>
         </header>
         <main>
-            <section id="about">
-                <div class="full-width">
-                    <div class="half-width">
+            <div id="about-wrapper">
+                <div id="picture-about">
+                    <div id="picture-box">
                         <img id="argentina-cris" src="img/argentina-cris.jpg" alt="Argentina Cris"/>
                     </div>
-                    <div class="half-width">
-                        <p>"What, if some day or night a demon were to steal after you into your loneliest loneliness and say to you: "This life as you now live it and have lived it, you will have to live once more and innumerable times more; and there will be nothing new in it, but every pain and every joy and every thought and sigh and everything unutterably small or great in your life will have to return to you, all in the same succession and sequence - even this spider and this moonlight between the trees, and even this moment and I myself. The eternal hourglass of existence is turned upside down again and again, and you with it, speck of dust!"
-                            Would you not throw yourself down and gnash your teeth and curse the demon who spoke thus?... Or how well disposed would you have to become to yourself and to life to crave nothing more fervently than this ultimate eternal confirmation and seal?"
-                            
-                            <br><span>Friedrich Nietzsche, The Gay Science, tr. Walter Kaufmann</span></p>
+                    <div id="about-box">
+                        <h2>About this site</h2>
+                        <p>Here you will find some of my recent work in web page and app design. Since the end of December 2020, I've learned HTML, CSS,
+                            Javacript, and JS React. I use VS Code, github, and netlify. I'm currently studying machine learning and ML ops, but
+                            my one true love is geometry in all its manifestations. For 22 years I designed surface modeling algorithms for computer-aided design systems. I also love puzzles and colors.</p>
+
                     </div>
                 </div>
+                <!--I'm having trouble formatting the font sizes - they're being inherited in a way
+                    that I can't figure out how to override. And nobody's interested in my favorite quote anyway,
+                    or where I took my vacation four years ago.
+                <div class="picture-caption">
+                    Campo de Piedra Pómez, Antofagasta de la Sierra, Argentina
+                </div>
+                <div class="quote-container">
+                  <details>
+                    <summary>Click on these words to read my favorite quote.</summary>
+                        <h4>What, if some day or night a demon were to steal after you into your loneliest loneliness and say to you: "This life
+                            as you now live it and have lived it, you will have to live once more and innumerable times more; and there will be
+                            nothing new in it, but every pain and every joy and every thought and sigh and everything unutterably small or great
+                            in your life will have to return to you, all in the same succession and sequence - even this spider and this
+                            moonlight between the trees, and even this moment and I myself. The eternal hourglass of existence is turned upside
+                            down again and again, and you with it, speck of dust!"
+                            Would you not throw yourself down and gnash your teeth and curse the demon who spoke thus?... Or how well disposed
+                            would you have to become to yourself and to life to crave nothing more fervently than this ultimate eternal
+                            confirmation and seal?
+                            <br><br><span>Friedrich Nietzsche, The Gay Science, tr. Walter Kaufmann</span>
+                        </h4>
+                  </details>
+                </div>
+                -->
+            </div>
+            <section id="react-block">
+              <div class="content-body">
+                <div class="content-block">
+                  <h2>Javascript React Apps</h2>
+                  <div class="content-block-columns">
+                    <div class="pic-plus-info">
+                        <img class="pic-plus-info-img" src="img/cryptogram-pic-large.jpeg" alt="Cryptogram app screenshot"/>
+                        <a href="https://cryptogram-assistant.com" alt="Cryptogram Assistant">Cryptogram Assistant</a>
+                        <p>I love solving cryptograms on paper, and I insist on using a pen rather than a pencil. So either I get it right
+                            from the start, or I have an inky mess. So when my friend Dan Fishman suggested I write a game, I immediately thought
+                            of a helpful formatted cryptogram app that lets me try out different solutions. There are a couple dozen cryptograms included. While researching other cryptogram sites, I became stumbled across one in particular
+                            that was very addictive. My goal in writing this was to make a non-addictive game. Therefore, entering the guess
+                            letters requires some work, there's no prize at the end, and the number of provided quotes is limited. But it's still a lot of fun.</p>
+                    </div>
+                    <div class="pic-plus-info">
+                        <img class="pic-plus-info-img" src="img/palette-pic2.jpeg" alt="Palette app screenshot" />
+                        <a href="https://palette-assistant.com" alt="Palette Assistant">Palette Assistant</a>
+                        <p>I was motivated to write this app after I saw a similar grid of colors sorted alphabetically, and then sorted naively
+                            by red first, then green, then blue. I thought I could do better, but I soon learned that sorting colors is a
+                            thorny problem. Visual media companies that need to determine color brightness apply different weights to the red, green and blue components of light to compute a brightness
+                            value. In this app, the user can rearrange the colors using drag and drop functionality and invoke a numerical
+                            method that will come up with a different set of weights based on the user's idea of light and dark.</p>
+                    </div>
+                    <div class="pic-plus-info">
+                        <img class="pic-plus-info-img" src="img/penrose-pic.jpeg" alt="Penrose app screenshot" />
+                        <p>This is a work in progress, so no link yet. With this app I'm reliving my glory days as a student of electrical
+                            engineering. This career consisted of exactly two semesters of Laboratory Electronics at the Harvard Extension School.
+                            During the second semester, we built a computer on a breadboard with chips and wires using the Motorola 68004 microprocessor. I
+                            wrote a program for this computer to generate Penrose tiling patterns on an oscilloscope display. At first I wrote machine language
+                            instructions directly onto a programmable ROM. When things got complicated, I switched to an assembly language translator.
+                            Previously I had written a similar program in Postscript that output Penrose tiling patterns to
+                            a laser printer. This is basically the same algorithm, except the language is Javascript React and the output is to
+                            a web page.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
             <section id="work">
-                <div class="full-width">
-                    <h2>Student Projects</h2>
-                    <ul>
-                        <li><a href="jubilee-austen/index.html" alt="Jubilee Austen">Jubilee Austen</a></li>
-                        <li><a href="rogue-pickings/index.html" alt="Rogue Pickings">Rogue Pickings</a></li>
-                        <li><a href="recipe-cards/index.html" alt="Recipe Cards">Recipe Cards</a></li>
-                        <li><a href="argentina/index.html" alt="Argentina">Argentina</a></li>
-                    </ul>
+              <div class="content-body">
+                <div class="content-block">
+                    <h2>Static HTML Projects</h2>
+                    <div class="content-block-columns">
+                        <div class="pic-plus-info">
+                            <img class="pic-plus-info-img-static" src="img/jubilee-austen.jpeg" alt="Jubilee Austen screenshot" />
+                            <a href="jubilee-austen/index.html" alt="Jubilee Austen">Jubilee Austen</a>
+                            <p>This was the first HTML page that I formatted. It's a one page web site with a nav bar that links to the various sections. This page is loosely based on that assignment.</p>
+                        </div>
+                        <div class="pic-plus-info">
+                            <img class="pic-plus-info-img-static" src="img/rogue-pickings.jpeg" alt="Rogue Pickings screenshot" />
+                            <a href="rogue-pickings/index.html" alt="Rogue Pickings">Rogue Pickings</a>
+                            <p>Our second assigment.
+                            </p>
+                        </div>
+                        <div class="pic-plus-info">
+                            <img class="pic-plus-info-img-static" src="img/recipe-cards.jpeg" alt="Recipe Cards screenshot" />
+                            <a href="recipe-cards/index.html" alt="Recipe Cards">Recipe Cards</a>
+                            <p>With this assigment we learned more.</p>
+                        </div>
+                    </div>
                 </div>
+              </div>
             </section> 
             <section id="creative">
                 <div class="full-width">
