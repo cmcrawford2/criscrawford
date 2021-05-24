@@ -5,14 +5,7 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #0f1015;
-}
-
 /***** HEADER *****/
-
-/* funky backgrounds are for debugging. */
 
 /* header wrapper is just to center 90% header block. */
 /* It also has the divider in it. */
@@ -36,6 +29,8 @@ h1, h2, h3 {
 }
 
 header h1 {
+    color: #0f1015;
+    font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     /* background-color: orange; */
 }
@@ -71,6 +66,7 @@ nav p a {
 }
 
 nav li a {
+    /* color: #0f1015; */
     font-size: 20px;
     padding: 0;
     text-decoration: none;
@@ -94,51 +90,83 @@ nav li a {
     padding-top: 30px;
 }
 
-/* Center the picture and about text horizontally for small screens. */
-/* Also it will be centered with respect to wrapper. */
-#picture-about {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#about-wrapper h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
 }
 
-#picture-box img#cris-picture {
-    width: calc(100% - 24px);
+#about-wrapper p {
+    color: #0f1015;
+    font-size: 18px;
+    /* padding: 0 10px 0 0; */
+}
+
+#picture-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background: orange;
+    padding: 0;
+}
+/*
+#picture-box {
+    background: lime;
+    width: 100%;
+    border: 10px solid white;
+}
+*/
+
+/* #picture-box img#argentina-cris { */
+#picture-about img#argentina-cris {
+    /* width: 100%; */
+    width: 100%;
+    height: fit-content;
     border: 12px solid white;
 }
 
 #about-box {
-    margin: 0;
+    /* margin-top: 10px; */
+    background: pink;
 }
 
-#about-box h2 {
-    font-size: 24px;
-    margin-top: 0;
+/* I decided not to put in a caption. */
+
+.picture-caption {
+    width: 95%;
+    background-color: skyblue;
 }
 
-#about-box p {
+.picture-caption p {
+    margin: 0 0 15px 0;
+    font-size: 10px;
+    font-style: italic;
+    text-align: left;
+    background-color: chartreuse;
+}
+
+/* I've taken out the quote for now. :( */
+
+.quote-container {
+    width: 95%;
     font-size: 18px;
+    font-style: italic;
 }
 
-@media only screen and (min-width: 520px) {
-    /* picture and text side by side for larger screens. */
-    /* I'm not sure I even need flexbox to do this. */
-    
-    #picture-about {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
+.quote-container h2 {
+    text-align: left;
+}
 
-    #picture-box {
-        width: 40%;
-    }
+.quote-container h4 {
+    margin: 0;
+    font-size: 18px;
+    font-style: unset;
+    font-weight: normal;
+}
 
-    #about-box {
-        width: 55%;
-    }
+.quote-container span {
+    font-style: italic;
 }
 
 .content-body { /* This centers the content block */
@@ -148,8 +176,7 @@ nav li a {
     align-items: center;
 }
 
-/* This has a header and the block that has the columns in it. */
-.content-block { 
+.content-block {    /* This has a header and the block that has the columns in it. */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,8 +187,7 @@ nav li a {
     text-align: left;
 }
 
-/* This is the block for the columns - they are in a column for mobile. */
-.content-block-columns {
+.content-block-columns {    /* This is the block for the columns - they are in a column for mobile. */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -202,6 +228,7 @@ nav li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Montserrat' sans-serif;
 }
 
 .contact-block {
@@ -222,7 +249,8 @@ nav li a {
     text-decoration: none;
     margin-left: 15px;
 }
-/* Tablet styles */
+
+/* Table styles */
 
 @media only screen and (min-width: 520px) {
 /* Nav buttons should be in a row, under the name. */
@@ -237,7 +265,6 @@ nav li a {
         align-items: flex-start;
         justify-content: space-between;
     }
-
     .pic-plus-info {    /* This is a single column. */
         display: flex;
         flex-direction: column;
@@ -251,24 +278,108 @@ nav li a {
 
 @media only screen and (min-width: 820px) {
 
-    .header-block {
+.header-block {
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+header h1 {
+    color: #0f1015;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+}
+
+nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style-type: none;
+}
+
+nav li a {
+    color: #0f1015;
+    font-size: 20px;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.header-divider {
+  width: 100%;
+  height: 2px;
+  margin: 0;
+  background: #0f1015;
+}
+/***** ABOUT *****/
+
+#about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+#about-wrapper h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+#about-wrapper p {
+    color: #0f1015;
+    font-size: 21px;
+    padding: 0 10px 0 0;
+}
+
+#about-wrapper img#argentina-cris {
+    max-width: 500px;
+    height: auto;
+    border: 12px solid white;
+    margin-top: 20px;
+}
+
+#picture-about {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 95%;
+}
+
+#about-box {
+    margin: 0 20px;
+}
+
+}
+
+/* Following is example from Rogue Pickings
+    header {
         justify-content: space-between;
-        flex-direction: row;
     }
 
     header h1 {
-        font-size: 36px;
+        width: 30%;
+        padding: 0;
+        border-bottom: none;
+        text-align: left;
     }
 
-    nav {
-        width: 50%;
+    header nav {
+        width: 40%;
     }
 
-    nav ul {
+    header nav ul {
+        display: flex;
         justify-content: space-between;
     }
-
-    .header-divider {
-        margin-top: 0px;
-    }
-}
+*/
